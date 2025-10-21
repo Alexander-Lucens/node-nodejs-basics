@@ -1,5 +1,12 @@
+import process from 'node:process';
+
+
+
 const parseEnv = () => {
-  // Write your code here
+  
+  Object.entries(process.env).forEach(([key, value]) => {
+    console.log(`RS_${key}=${value}`);
+  });
 };
 
 parseEnv();

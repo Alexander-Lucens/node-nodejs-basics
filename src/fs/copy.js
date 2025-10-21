@@ -12,7 +12,7 @@ const copy = async () => {
 
   try {
 
-    await fs.access(oldDir);
+    // await fs.access(oldDir);
 
     try {
       await fs.access(newDir);
