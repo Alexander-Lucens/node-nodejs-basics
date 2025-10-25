@@ -11,9 +11,6 @@ const copy = async () => {
   const newDir = path.join(__dirname, 'files_copy');
 
   try {
-
-    // await fs.access(oldDir);
-
     try {
       await fs.access(newDir);
       throw new Error('FS operation failed');
@@ -22,9 +19,7 @@ const copy = async () => {
         throw new Error('FS operation failed');
       }
     }
-
     await fs.cp(oldDir, newDir, { recursive: true });
-    
   } catch (error) {
     throw new Error('FS operation failed');
   }
